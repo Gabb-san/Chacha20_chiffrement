@@ -1,0 +1,77 @@
+# //  ModelSim SE-64 2020.4 Oct 13 2020 Linux 5.14.0-611.49.2.el9_7.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -L lib_rtl lib_bench.chacha_top_tb -do "chacha20_top_wave.do" 
+# Start time: 17:34:47 on May 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "fsm_moore(fast)".
+# Loading sv_std.std
+# Loading lib_rtl.chacha_pack(fast)
+# Loading work.chacha_top_tb(fast)
+# Loading lib_rtl.chacha_top(fast)
+# Loading lib_rtl.round_cpt(fast)
+# Loading lib_rtl.fsm_moore(fast)
+# Loading lib_rtl.chacha_block(fast)
+# Loading lib_rtl.round(fast)
+# Loading lib_rtl.input_round(fast)
+# Loading lib_rtl.q_round(fast)
+# Loading lib_rtl.arx(fast)
+# Loading lib_rtl.arx(fast__1)
+# Loading lib_rtl.arx(fast__2)
+# Loading lib_rtl.arx(fast__3)
+# Loading lib_rtl.output_round(fast)
+# Loading lib_rtl.dff_state(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (5) for port 'count_o'. The port definition is at: ./src/rtl/round_cpt.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /chacha_top_tb/dut/compteur File: ./src/rtl/chacha_top.sv Line: 28
+# do chacha20_top_wave.do
+# ** UI-Msg: (vish-4014) No objects found matching '/chacha_top_tb/dut/nounce_i'.
+# Executing ONERROR command at macro ./chacha20_top_wave.do line 7
+# hexadecimal
+run
+# Ciphertext word #1 @300.000 ns: 322523b73ceabe5e8e05fc68143022e0
+# Ciphertext word #2 @330.000 ns: e46c5ee17a42f515954acdecd4eeef62
+# Ciphertext word #3 @360.000 ns: 2cc9fab0b90f73406abbf0408580ba3e
+# Computed Ciphertext: fab0b90f73406abbf0408580ba3ee46c5ee17a42f515954acdecd4eeef62322523b73ceabe5e8e05fc68143022e0
+# Expected Ciphertext: fab0b90f73406abbf0408580ba3ee46c5ee17a42f515954acdecd4eeef62322523b73ceabe5e8e05fc68143022e0
+# Computed ^ Expected: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# Test PASSED: Computed ciphertext matches expected value.
+add wave -position insertpoint  \
+sim:/chacha_top_tb/full_cipher_s
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading lib_rtl.chacha_pack(fast)
+# Loading work.chacha_top_tb(fast)
+# Loading lib_rtl.chacha_top(fast)
+# Loading lib_rtl.round_cpt(fast)
+# Loading lib_rtl.fsm_moore(fast)
+# Loading lib_rtl.chacha_block(fast)
+# Loading lib_rtl.round(fast)
+# Loading lib_rtl.input_round(fast)
+# Loading lib_rtl.q_round(fast)
+# Loading lib_rtl.arx(fast)
+# Loading lib_rtl.arx(fast__1)
+# Loading lib_rtl.arx(fast__2)
+# Loading lib_rtl.arx(fast__3)
+# Loading lib_rtl.output_round(fast)
+# Loading lib_rtl.dff_state(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (5) for port 'count_o'. The port definition is at: ./src/rtl/round_cpt.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /chacha_top_tb/dut/compteur File: ./src/rtl/chacha_top.sv Line: 28
+run
+# Ciphertext word #1 @300.000 ns: 322523b73ceabe5e8e05fc68143022e0
+# Ciphertext word #2 @330.000 ns: e46c5ee17a42f515954acdecd4eeef62
+# Ciphertext word #3 @360.000 ns: 2cc9fab0b90f73406abbf0408580ba3e
+# Computed Ciphertext: fab0b90f73406abbf0408580ba3ee46c5ee17a42f515954acdecd4eeef62322523b73ceabe5e8e05fc68143022e0
+# Expected Ciphertext: fab0b90f73406abbf0408580ba3ee46c5ee17a42f515954acdecd4eeef62322523b73ceabe5e8e05fc68143022e0
+# Computed ^ Expected: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+# Test PASSED: Computed ciphertext matches expected value.
